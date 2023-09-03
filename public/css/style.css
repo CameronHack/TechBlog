@@ -1,11 +1,17 @@
 body {
     background-color: hwb(0 16% 84%);
+    color: #ffffff;
 }
 
 header {
-    background-color: hwb(180 84% 0%)
+    background-color: hwb(0 3% 97%)
+}
+
+header h1 {
+    font-size: 3rem;
+    padding: 20px;
 }
 
 .post {
-    background-color: hwb(160 74% 8%);
+    background-color: hwb(165 5% 92%);
 }
