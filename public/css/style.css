@@ -4,21 +4,25 @@
 
 :root {
     --mainColor: hwb(32 14% 15%);
-    --secondaryColor: hwb(0 11% 89%);
+    --secondaryColor: hwb(0 6% 94%);
+    --thirdColor: hwb(0 28% 72%);
     --textColor: #fff;
 }
 
+::placeholder {
+    color: var(--secondaryColor);
+}
+
 body {
-    background-color: hwb(0 16% 84%);
+    background-color: hwb(0 9% 91%);
 }
 
 a {
     text-decoration: none;
-    color: var(--textColor);
 }
 
 header {
-    background-color: hwb(0 3% 97%);
+    background-color: var(--secondaryColor);
     height: 110px;
 }
 
@@ -30,6 +34,10 @@ header h1 {
     left: 40px;
 }
 
+header h1 a {
+    color: var(--mainColor);
+}
+
 header nav {
     display: flex;
     justify-content: end;
@@ -39,11 +47,11 @@ header nav a {
     padding-right: 40px;
     font-size: 1.4rem;
     transition: 50ms;
+    color: var(--textColor);
 }
 
 header nav a:hover {
     color: var(--mainColor);
-    scale: 1.1;
 }
 
 .container {
@@ -61,11 +69,12 @@ header nav a:hover {
 
 /* homepage posts */
 .post a {
-    color: hwb(180 69% 0%);
+    color: var(--textColor);
+    transition: 50ms;
 }
 
 .post a:hover {
-    color: hwb(180 27% 45%);
+    color: var(--mainColor);
 }
 
 .post-title {
@@ -74,13 +83,13 @@ header nav a:hover {
 }
 
 .post-content {
-    background-color: #2e2e2e;
+    background-color: var(--thirdColor);
     color: #fff;
     padding: 20px;
     margin: 20px 0;
 }
 
-#post-creator {
+.post-creator {
     color: #535353;
     text-align: end;
 }
@@ -92,6 +101,10 @@ h3, h2 {
 }
 
 /* login signup */
+.form-input {
+    color: var(--textColor);
+}
+
 .form {
     padding: 20px 0;
 }
@@ -107,27 +120,59 @@ h3, h2 {
     outline: none;
     border: 0;
     margin: 10px 0;
+    background-color: var(--thirdColor);
 }
 
-/* login/signup button */
-.login-submit {
+/* login/signup create button */
+.submit-button {
     color: var(--textColor);
     padding: 10px;
     border: 0;
     border-radius: 5px;
     margin: 10px 0;
-    background-color: #535353;
+    background-color: var(--mainColor);
+    transition: 50ms;
 }
 
-.login-submit:hover {
-    background-color: var(--mainColor);
+.submit-button:hover {
+    background-color: var(--thirdColor);
     cursor: pointer;
 }
 
 .loginsignuplinker {
-    color: #fff;
+    color: var(--textColor);
+    transition: 50ms;
 }
 
 .loginsignuplinker:hover {
-    color: #c9c9c9;
+    color: var(--mainColor);
+}
+
+/* Dashboard */
+#post-title,
+#post-content {
+    width: 50vw;
+    height: 30px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    margin: 10px 0;
+    background-color: var(--thirdColor);
+}
+
+#post-content {
+    height: 300px;
+}
+
+textarea {
+    padding: 20px;
+    resize: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        background-color: var(--secondaryColor);
+        padding: 20px;
+        margin: 10px;
+    }
 }

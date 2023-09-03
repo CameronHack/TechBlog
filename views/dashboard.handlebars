@@ -1,4 +1,4 @@
-<div class="container">
+<div class="flex container">
   <h3>Create new Post</h3>
 
   <form class="form new-post-form">
@@ -9,23 +9,33 @@
       <textarea class="form-input" id="post-content" placeholder="Content"></textarea>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn-primary">Create</button>
+      <button type="submit" class="submit-button">Create</button>
     </div>
   </form>
 </div>
 
-<h3>Previous Posts</h3>
 
-{{#each posts as |post|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+
+<h3 class="container">Previous Posts</h3>
+
+{{#each posts as |post| }}
+  <div class="container post">
+
+    <h2 class="post-title">
+      <a href="/post/{{post.id}}">{{post.title}}</a>
+    </h2>
+
+    <div class="post-content">
+      <p>
+        {{post.content}}
+      </p>
     </div>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-    </div>
+
+    <p class="post-creator">Created by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
 {{/each}}
+
+
 
 
 <script src="./js/dashboard.js"></script>
