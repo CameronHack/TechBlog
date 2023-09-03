@@ -1,0 +1,11 @@
+body {
+    background-color: hwb(0 16% 84%);
+}
+
+header {
+    background-color: hwb(180 84% 0%)
+}
+
+.post {
+    background-color: hwb(160 74% 8%);
+}
