@@ -2,5 +2,22 @@
   <h2 class="post-title">{{title}}</h2>
   <p class="post-content">{{content}}</p>
   <p class="post-creator">Created by {{user.name}} on {{format_date date_created}}</p>
-  <button class="submit-button">Comment</button>
+  <button class="submit-button new-comment">Comment</button>
 </div>
+
+{{!-- display comments here later --}}
+
+<div class="flex container new-comment-container" style="display: none;">
+  <h3>New Comment not currently working</h3>
+
+  <form class="form new-post-form">
+    <div class="form-group">
+      <textarea class="form-input" id="post-content" placeholder="Content"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="submit-button">Create</button>
+    </div>
+  </form>
+</div>
+
+<script src="../js/comment.js"></script>

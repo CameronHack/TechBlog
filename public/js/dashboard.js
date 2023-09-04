@@ -56,8 +56,6 @@ const updatePost = async (e) => {
   const container = e.target.closest('.container')
   const textarea = container.querySelector('.update-content')
   const content = textarea.value.trim()
-
-  console.log(id)
   
   if (e.target.hasAttribute('data-id') && content) {
 
