@@ -51,6 +51,32 @@ const showNewPost = async (e) => {
   }
 }
 
+const updatePost = async (e) => {
+  const id = e.target.getAttribute('data-id')
+  const container = e.target.closest('.container')
+  const textarea = container.querySelector('.update-content')
+  const content = textarea.value.trim()
+
+  console.log(id)
+  
+  if (e.target.hasAttribute('data-id') && content) {
+
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify({ content }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to update post');
+    }
+  }
+}
+
 const postForm = document.querySelector('.new-post-form')
 postForm.addEventListener('submit', newFormHandler);
 
@@ -58,7 +84,12 @@ const newPostContainer = document.querySelector('.new-post-container');
 const newPostButton = document.querySelector('.new-post');
 newPostButton.addEventListener('click', showNewPost)
 
-const deleteButton = document.querySelectorAll('.previous-buttons')
+const deleteButton = document.querySelectorAll('.delete-post')
 deleteButton.forEach(button => {
   button.addEventListener('click', delButtonHandler);
+});
+
+const updateButton = document.querySelectorAll('.update-post')
+updateButton.forEach(button => {
+  button.addEventListener('click', updatePost);
 });

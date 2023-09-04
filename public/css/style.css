@@ -159,7 +159,8 @@ h3, h2 {
 }
 
 #post-title,
-#post-content {
+#post-content,
+.update-content {
     width: 50vw;
     height: 30px;
     text-align: center;
@@ -176,6 +177,11 @@ h3, h2 {
 textarea {
     padding: 20px;
     resize: none;
+}
+
+.update-content {
+    height: auto;
+    width: 100%;
 }
 
 .update-post {

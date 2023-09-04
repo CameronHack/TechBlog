@@ -27,14 +27,10 @@
       <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
 
-    <div class="post-content">
-      <p>
-        {{post.content}}
-      </p>
-    </div>
+    <textarea class="form-input update-content">{{post.content}}</textarea>
 
     <div class="previous-buttons">
-        <button class="update-post">Update</button>
+        <button class="update-post" data-id="{{post.id}}">Update</button>
         <button class="delete-post" data-id="{{post.id}}">Delete</button>
     </div>
 
