@@ -1,4 +1,4 @@
-<div class="flex container">
+<div class="flex container new-post-container" style="display: none;">
   <h3>Create new Post</h3>
 
   <form class="form new-post-form">
@@ -14,9 +14,11 @@
   </form>
 </div>
 
+<button class="submit-button new-post">New Post +</button>
 
-
-<h3 class="container">Previous Posts</h3>
+<div class="container">
+  <h3>Previous Posts</h3>
+</div>
 
 {{#each posts as |post| }}
   <div class="container post">
@@ -29,6 +31,11 @@
       <p>
         {{post.content}}
       </p>
+    </div>
+
+    <div class="previous-buttons">
+        <button class="update-post">Update</button>
+        <button class="delete-post" data-id="{{post.id}}">Delete</button>
     </div>
 
     <p class="post-creator">Created by {{post.user.name}} on {{format_date post.date_created}}</p>

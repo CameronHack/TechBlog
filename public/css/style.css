@@ -3,7 +3,7 @@
 }
 
 :root {
-    --mainColor: hwb(32 14% 15%);
+    --mainColor: hwb(125 14% 15%);
     --secondaryColor: hwb(0 6% 94%);
     --thirdColor: hwb(0 28% 72%);
     --textColor: #fff;
@@ -19,6 +19,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--textColor);
 }
 
 header {
@@ -124,7 +125,9 @@ h3, h2 {
 }
 
 /* login/signup create button */
-.submit-button {
+.submit-button,
+.update-post,
+.delete-post {
     color: var(--textColor);
     padding: 10px;
     border: 0;
@@ -149,6 +152,12 @@ h3, h2 {
 }
 
 /* Dashboard */
+.new-post {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+}
+
 #post-title,
 #post-content {
     width: 50vw;
@@ -167,6 +176,20 @@ h3, h2 {
 textarea {
     padding: 20px;
     resize: none;
+}
+
+.update-post {
+    background-color: #639953;
+}
+
+.delete-post {
+    background-color: #995353;
+}
+
+.update-post:hover,
+.delete-post:hover {
+    background-color: var(--thirdColor);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
