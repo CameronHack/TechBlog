@@ -152,7 +152,8 @@ h3, h2 {
 }
 
 /* Dashboard */
-.new-post {
+.new-post,
+.new-comment {
     position: absolute;
     top: 120px;
     left: 20px;

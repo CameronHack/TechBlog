@@ -1,17 +1,18 @@
 [
   {
-    "content": "comment 1"
+    "content": "comment 1",
+    "post_id": 1
   },
   {
-    "content": "comment 2"
+    "content": "comment 2",
+    "post_id": 1
   },
   {
-    "content": "comment 3"
+    "content": "comment 1",
+    "post_id": 2
   },
   {
-    "content": "comment 4"
-  },
-  {
-    "content": "comment 5"
+    "content": "comment 2",
+    "post_id": 2
   }
 ]
