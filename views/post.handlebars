@@ -1,15 +1,15 @@
-  <button class="submit-button new-comment">Comment</button>
+<button class="submit-button new-comment">Comment</button>
 
 {{!-- hidden comment menu --}}
 <div class="flex container new-comment-container" style="display: none;">
-  <h3>New Comment not currently working</h3>
+  <h3>New Comment</h3>
 
   <form class="form new-post-form">
     <div class="form-group">
       <textarea class="form-input" id="post-content" placeholder="Content"></textarea>
     </div>
     <div class="form-group">
-      <button type="submit" class="submit-button">Create</button>
+      <button class="submit-button new-comment-submit" data-id="{{id}}">Create</button>
     </div>
   </form>
 </div>
@@ -25,7 +25,7 @@
 {{#each comments as |comment| }}
   <div class="container post">
     <p class="post-content">{{comment.content}}</p>
-    <p class="post-creator">Created by {{comment.User.name}} on {{format_date date_created}}</p>
+    <p class="post-creator">Created by FIXNAME on {{format_date date_created}}</p>
   </div>
 {{/each}}
 
