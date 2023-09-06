@@ -1,6 +1,6 @@
 # Tech Blog
 
-Link to deployed website
+[Link to deployed website](https://shrouded-reef-98444-ebcd1eaa46d8.herokuapp.com/)
 
 ## Description
 
@@ -27,3 +27,5 @@ MIT License - Permissive free software license
 [My GitHub Profile](https://github.com/cameronhack)
 
 Contact me at: camhack67@gmail.com
+
+![techblog](https://github.com/CameronHack/TechBlog/assets/139071966/4b14bc71-a475-4a91-b65a-dab047ff9a7c)
